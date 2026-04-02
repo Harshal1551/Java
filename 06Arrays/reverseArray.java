@@ -1,4 +1,4 @@
-
+ 
 public class reverseArray {
      
     public static void reverse(int nums[]){
