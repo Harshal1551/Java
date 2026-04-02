@@ -43,5 +43,6 @@ public class SearchElement {
         }
 
         sc.close();
+        
     }
 }
