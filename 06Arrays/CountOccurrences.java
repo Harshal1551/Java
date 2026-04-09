@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class FirstLastOccurrence {
+public class CountOccurrences {
+
     
-    // Find First Occurrence
-    public static int findFirst(int arr[], int key) {
+     public static int findFirst(int arr[], int key) {
         int start = 0, end = arr.length - 1;
         int result = -1;
 
@@ -12,7 +12,7 @@ public class FirstLastOccurrence {
 
             if (arr[mid] == key) {
                 result = mid;
-                end = mid - 1; 
+                end = mid - 1;
             }
             else if (arr[mid] < key) {
                 start = mid + 1;
@@ -21,11 +21,9 @@ public class FirstLastOccurrence {
                 end = mid - 1;
             }
         }
-
         return result;
     }
 
-    // Find Last Occurrence
     public static int findLast(int arr[], int key) {
         int start = 0, end = arr.length - 1;
         int result = -1;
@@ -35,7 +33,7 @@ public class FirstLastOccurrence {
 
             if (arr[mid] == key) {
                 result = mid;
-                start = mid + 1; 
+                start = mid + 1;
             }
             else if (arr[mid] < key) {
                 start = mid + 1;
@@ -44,7 +42,6 @@ public class FirstLastOccurrence {
                 end = mid - 1;
             }
         }
-
         return result;
     }
 
@@ -69,10 +66,10 @@ public class FirstLastOccurrence {
         int last = findLast(arr, key);
 
         if (first == -1) {
-            System.out.println("Element not found");
+            System.out.println("Count = 0");
         } else {
-            System.out.println("First Occurrence: " + first);
-            System.out.println("Last Occurrence: " + last);
+            int count = last - first + 1;
+            System.out.println("Count = " + count);
         }
 
         sc.close();
